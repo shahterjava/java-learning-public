@@ -2,9 +2,9 @@ public class MethodExamples {
     public static void main(String[] args) {
         sayHello();
         greetByName("Dmitriy");
-        sum(3,7);
+        sum(3,  7);
     }
-    public static void sayHello(){
+    private static void sayHello(){
         System.out.println("Привет, пользователь.");
     }
     public static void greetByName(String name){
