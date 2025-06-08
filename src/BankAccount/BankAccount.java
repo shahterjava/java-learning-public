@@ -9,21 +9,21 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    void deposit(double amount){
+    public void deposit(double amount){
         balance += amount;
     }
-    void withdraw(double amount){
+    public void withdraw(double amount){
         if(amount>balance){
             System.out.println("На счете недостаточно средств!");
         }else {
             balance -= amount;
         }
     }
-    void showInfo(){
+    public void showInfo(){
         System.out.println("Владелец счета: "+ getOwner() + ". Баланс: "+ getBalance()+".");
     }
 
-    void transferTo(BankAccount other, double amount){
+    public void transferTo(BankAccount other, double amount){
         if (amount > balance) {
             System.out.println("Для перевода недостаточно средств.");
         }else{
