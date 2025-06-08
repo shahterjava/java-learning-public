@@ -22,6 +22,17 @@ public class BankAccount {
     void showInfo(){
         System.out.println("Владелец счета: "+ getOwner() + ". Баланс: "+ getBalance()+".");
     }
+
+    void transferTo(BankAccount other, double amount){
+        if (amount > balance) {
+            System.out.println("Для перевода недостаточно средств.");
+        }else{
+            balance-=amount;
+            other.balance += amount;
+            System.out.println("Был осуществлен в перевод в размере: "+ amount+" рублей." +
+                    " Перевод отправлен: "+ other.owner);
+        }
+    }
     public String getOwner() {
         return owner;
     }
