@@ -10,7 +10,7 @@ public class BankAccountDemo {
         System.out.println("Добро пожаловать в наш банк!");
         while (true){
             System.out.println();
-            System.out.println("1.Зарегистрировать аккаунт\n2.Показать всех клиентов\n3.Найти аккаунт по имени\n4.Перевести деньги\n5.Выход");
+            System.out.println("1.Зарегистрировать аккаунт\n2.Показать всех клиентов\n3.Найти аккаунт по имени\n4.Найти аккаунт по ID.\n5.Перевести деньги\n6.Выход");
             System.out.print("Выберите действие:");
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -43,7 +43,17 @@ public class BankAccountDemo {
                 }else{
                     System.out.println("Аккаунт не найден.");
                 }
-            }else if(choice == 4){
+            }  else if(choice == 4){
+                System.out.print("Введите номер ID: ");
+                int id = scanner.nextInt();
+                BankAccount acc = accounts.findAccountById(id);
+                if(acc != null){
+                    acc.showInfo();
+                }else{
+                    System.out.println("Аккаунт не найден.");
+                }
+            }
+               else if(choice == 5){
                 System.out.println("Кто отправляет");
                 String from = scanner.nextLine();
                 System.out.println("Куда отправляет?");
@@ -60,7 +70,7 @@ public class BankAccountDemo {
                     System.out.println("Один или несколько из аккаунтов не найдены.");
                 }
                 accounts.saveAccountsToFile("accounts.txt");
-            }else if(choice == 5){
+            }else if(choice == 6){
                 System.out.println("Всего вам доброго!");
                 accounts.saveAccountsToFile("accounts.txt");
                 break;

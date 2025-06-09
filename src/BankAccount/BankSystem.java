@@ -18,6 +18,14 @@ public class BankSystem {
             return null;
 
     }
+    public BankAccount findAccountById(int id){
+        for (BankAccount account : accounts) {
+            if(account.getId() == id ){
+                return account;
+            }
+        }
+        return null;
+    }
     public void showAllAccounts(){
         for (BankAccount account : accounts) {
             account.showInfo();
