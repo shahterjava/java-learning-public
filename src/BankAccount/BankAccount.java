@@ -1,12 +1,28 @@
 package BankAccount;
 
-public class BankAccount {
+import java.io.Serializable;
+
+public class BankAccount implements Serializable {
     private String owner;
     private double balance;
 
-    public BankAccount(String owner, double balance) {
+    private static int nextId = 1;
+
+    private int id;
+
+    public BankAccount(int id, String owner, double balance) {
         this.owner = owner;
         this.balance = balance;
+        this.id = nextId++;
+    }
+
+    public BankAccount(String owner, double balance, int id) {
+        this.owner = owner;
+        this.balance = balance;
+        this.id = id;
+        if(id>= nextId){
+            nextId = id +1;
+        }
     }
 
     public void deposit(double amount){
@@ -33,6 +49,9 @@ public class BankAccount {
                     " Перевод отправлен: "+ other.owner);
         }
     }
+    public int getId() {
+        return id;
+    }
     public String getOwner() {
         return owner;
     }
@@ -47,5 +66,11 @@ public class BankAccount {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + " | " + owner + " | Balance: " + balance;
+
     }
 }

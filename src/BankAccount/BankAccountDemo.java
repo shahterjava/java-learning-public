@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BankAccountDemo {
     public static void main(String[] args) {
         BankSystem accounts = new BankSystem();
+        accounts.loadAccountsFromFile("accounts.txt");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Добро пожаловать в наш банк!");
         while (true){
@@ -14,6 +15,7 @@ public class BankAccountDemo {
             int choice = scanner.nextInt();
             scanner.nextLine();
             if(choice==1){
+                int id = 0;
                 System.out.print("Введите имя клиента:");
                 String name = scanner.nextLine();
                 System.out.print("Начальный баланс:");
@@ -26,9 +28,10 @@ public class BankAccountDemo {
                         while (balance > 0);
 
                     }
-                BankAccount newAcc = new BankAccount(name, balance);
+                BankAccount newAcc = new BankAccount(id, name, balance);
                 accounts.addAccount(newAcc);
                 System.out.println("Аккаунт был создан");
+                accounts.saveAccountsToFile("accounts.txt");
             } else if (choice == 2) {
                 accounts.showAllAccounts();
             }else if (choice == 3){
@@ -56,12 +59,15 @@ public class BankAccountDemo {
                 }else {
                     System.out.println("Один или несколько из аккаунтов не найдены.");
                 }
+                accounts.saveAccountsToFile("accounts.txt");
             }else if(choice == 5){
                 System.out.println("Всего вам доброго!");
+                accounts.saveAccountsToFile("accounts.txt");
                 break;
             }else{
                 System.out.println("Вы задали некорректное значение операции. Попробуйте снова!");
             }
         }
+        accounts.saveAccountsToFile("accounts.txt");
     }
 }
