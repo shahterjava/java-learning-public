@@ -1,3 +1,5 @@
+package OthersProgramm;
+
 import java.util.Scanner;
 
 public class CheckAge {

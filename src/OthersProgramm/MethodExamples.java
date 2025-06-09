@@ -1,3 +1,5 @@
+package OthersProgramm;
+
 public class MethodExamples {
     public static void main(String[] args) {
         sayHello();

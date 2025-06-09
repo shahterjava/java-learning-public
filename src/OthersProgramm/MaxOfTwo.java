@@ -1,3 +1,5 @@
+package OthersProgramm;
+
 public class MaxOfTwo {
     public static void main(String[] args) {
         System.out.println(max(7,4));
