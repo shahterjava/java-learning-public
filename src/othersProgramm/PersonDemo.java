@@ -1,6 +1,4 @@
-package OthersProgramm;
-
-import OthersProgramm.Person;
+package othersProgramm;
 
 public class PersonDemo {
     public static void main(String[] args) {

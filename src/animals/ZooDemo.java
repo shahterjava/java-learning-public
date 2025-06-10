@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public class ZooDemo {
     public static void main(String[] args) {

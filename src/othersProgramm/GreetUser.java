@@ -1,4 +1,4 @@
-package OthersProgramm;
+package othersProgramm;
 
 public class GreetUser {
     public static void main(String[] args) {

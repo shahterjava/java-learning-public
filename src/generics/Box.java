@@ -1,4 +1,4 @@
-package collections;
+package generics;
 
 public class Box <T>{
     private T value;

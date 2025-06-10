@@ -1,4 +1,4 @@
-package OthersProgramm;
+package othersProgramm;
 
 public class MaxOfTwo {
     public static void main(String[] args) {

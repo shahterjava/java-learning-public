@@ -1,4 +1,6 @@
-package collections;
+package generics;
+
+import collections.Task;
 
 public class BoxDemo {
     public static void main(String[] args) {
