@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class Client {
-    private int id;
+    private UUID id;
     private String name;
     private String email;
     private String phone;
@@ -14,7 +14,7 @@ public class Client {
     private List<Order> orders = new ArrayList<>();
 
     public Client(String name, String email, String phone) {
-        this.id = nextId;
+
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -45,11 +45,11 @@ public class Client {
                 '}';
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

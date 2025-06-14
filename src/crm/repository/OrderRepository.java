@@ -10,8 +10,8 @@ public class OrderRepository {
      public void add(UUID id, Order order){
          orders.put(id, order);
      }
-     public Order findById(UUID id){
-        return orders.get(id);
+     public Optional<Order> findById(UUID id){
+        return Optional.ofNullable(orders.get(id));
      }
 
      public List<Order> findByAll(){
