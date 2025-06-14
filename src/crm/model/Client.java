@@ -3,6 +3,7 @@ package crm.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 public class Client {
     private int id;
