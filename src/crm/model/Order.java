@@ -1,20 +1,26 @@
 package crm.model;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class Order {
-    private int id;
+    private String id;
     private String description;
     private double amount;
-    private String status; // "NEW" , "IN_PROGRESS" , "COMPLETED"
+    private OrderStatus status; // "NEW" , "IN_PROGRESS" , "COMPLETED"
     private LocalDateTime createdAt;
 
-    public int getId() {
-        return id;
+    public Order(String description, double amount) {
+        this.id = UUID.randomUUID().toString();
+        this.description = description;
+        this.amount = amount;
+        this.status = OrderStatus.NEW;
+        this.createdAt = LocalDateTime.now();
+
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getId() {
+        return id;
     }
 
     public String getDescription() {
@@ -33,19 +39,9 @@ public class Order {
         this.amount = amount;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
 }
