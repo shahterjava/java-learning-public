@@ -1,9 +1,6 @@
 package crm.model;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 
 public class Client {
     private UUID id;
@@ -19,6 +16,7 @@ public class Client {
         this.email = email;
         this.phone = phone;
         nextId++;
+        this.id = UUID.randomUUID();
     }
 
     @Override
