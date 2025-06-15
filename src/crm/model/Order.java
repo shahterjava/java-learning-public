@@ -4,14 +4,14 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Order {
-    private String id;
+    private UUID id;
     private String description;
     private double amount;
     private OrderStatus status; // "NEW" , "IN_PROGRESS" , "COMPLETED"
     private LocalDateTime createdAt;
 
     public Order(String description, double amount) {
-        this.id = UUID.randomUUID().toString();
+        this.id = UUID.randomUUID();
         this.description = description;
         this.amount = amount;
         this.status = OrderStatus.NEW;
@@ -27,7 +27,7 @@ public class Order {
         this.status = status;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
