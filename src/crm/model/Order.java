@@ -9,6 +9,11 @@ public class Order {
     private double amount;
     private OrderStatus status; // "NEW" , "IN_PROGRESS" , "COMPLETED"
     private LocalDateTime createdAt;
+    private Client client;
+
+    public Client getClient() {
+        return client;
+    }
 
     public Order(String description, double amount) {
         this.id = UUID.randomUUID();

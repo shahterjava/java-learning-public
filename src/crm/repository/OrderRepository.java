@@ -14,7 +14,7 @@ public class OrderRepository {
         return Optional.ofNullable(orders.get(id));
      }
 
-     public List<Order> findByAll(){
+     public List<Order> findAll(){
          return new ArrayList<>(orders.values());
      }
      public void remove(UUID id){
