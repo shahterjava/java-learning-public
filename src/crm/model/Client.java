@@ -10,7 +10,7 @@ public class Client {
     private static int nextId = 1;
     private List<Order> orders = new ArrayList<>();
 
-    public Client(String name, String email, String phone) {
+    public Client(UUID id, String name, String email, String phone) {
 
         this.name = name;
         this.email = email;
@@ -34,13 +34,10 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Клиент: [" +
-                "id=" + id +
-                ", имя='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", номер телефона ='" + phone + '\'' +
-                ", действия =" + orders +
-                '}';
+        return "Клиент: " +
+                "\nEmail: " + email +
+                "\nТелефон: " + phone  +
+                "\nID: " + id;
     }
 
     public UUID getId() {

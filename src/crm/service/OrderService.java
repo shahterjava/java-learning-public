@@ -11,6 +11,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class OrderService {
+    \
     private final ClientRepository clientRepository;
     private final OrderRepository orderRepository;
 
@@ -18,6 +19,8 @@ public class OrderService {
         this.clientRepository = clientRepository;
         this.orderRepository = orderRepository;
     }
+
+
 
     public boolean createOrder(UUID clientId, String description, double amount){
         Optional<Client> clientOpt = clientRepository.findById(clientId);
