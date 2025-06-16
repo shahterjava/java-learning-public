@@ -34,9 +34,9 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Клиент: " +
-                "\nEmail: " + email +
-                "\nТелефон: " + phone  +
+        return "Клиент: " + name + ", " +
+                "\nEmail: " + email + ", " +
+                "\nТелефон: " + phone  + ", " +
                 "\nID: " + id;
     }
 

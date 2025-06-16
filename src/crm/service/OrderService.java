@@ -11,7 +11,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class OrderService {
-    \
+
     private final ClientRepository clientRepository;
     private final OrderRepository orderRepository;
 

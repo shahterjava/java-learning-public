@@ -26,7 +26,8 @@ public class ClientService {
         if(!number.startsWith("7")){
             return number;
         }
-        return "+7" + number.substring(1,4) + ""+
+        return "+7" + number.substring(0,0) + " " +
+                number.substring(1,4) + "-"+
                 number.substring(4,7) + "-" +
                 number.substring(7,9) + "-" +
                 number.substring(9);
